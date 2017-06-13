@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping
 import java.sql.SQLException
 import java.util.*
 import javax.sql.DataSource
+import javax.measure.unit.SI
+import javax.measure.quantity.Mass
+import org.jscience.physics.model.RelativisticModel
+import org.jscience.physics.amount.Amount
 
 @Controller
 class Controller {
@@ -26,6 +30,14 @@ class Controller {
     internal fun index(): String {
         return "index"
     }
+
+@RequestMapping("/hello")
+internal fun hello(model: MutableMap<String, Any>): String {
+    RelativisticModel.select()
+    val m = Amount.valueOf("12 GeV").to(SI.KILOGRAM)
+    model.put("science", "E=mc^2: 12 GeV = $m")
+    return "hello"
+}
 
     @RequestMapping("/db")
     internal fun db(model: MutableMap<String, Any>): String {

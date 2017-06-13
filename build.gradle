@@ -40,4 +40,5 @@ dependencies {
     compile 'org.webjars:jquery:2.2.4'
     compile 'org.webjars:jquery-ui:1.11.4'
     compile 'org.webjars:bootstrap:3.3.6'
+    compile 'org.jscience:jscience:4.3.1'
 }
