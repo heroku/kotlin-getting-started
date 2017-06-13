@@ -31,13 +31,13 @@ class Controller {
         return "index"
     }
 
-@RequestMapping("/hello")
-internal fun hello(model: MutableMap<String, Any>): String {
-    RelativisticModel.select()
-    val m = Amount.valueOf("12 GeV").to(SI.KILOGRAM)
-    model.put("science", "E=mc^2: 12 GeV = $m")
-    return "hello"
-}
+    @RequestMapping("/hello")
+    internal fun hello(model: MutableMap<String, Any>): String {
+        RelativisticModel.select()
+        val m = Amount.valueOf("12 GeV").to(SI.KILOGRAM)
+        model.put("science", "E=mc^2: 12 GeV = $m")
+        return "hello"
+    }
 
     @RequestMapping("/db")
     internal fun db(model: MutableMap<String, Any>): String {
