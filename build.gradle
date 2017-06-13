@@ -17,17 +17,12 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'application'
 
 jar {
-    baseName = 'gs-rest-service'
-    version = '0.1.0'
+    baseName = 'kotlin-getting-started'
+    version = '1.0'
 }
 
 repositories {
     jcenter()
-}
-
-configurations {
-    compile.exclude module: 'thymeleaf-layout-dialect'
-    all*.exclude group: 'nz.net.ultraq.thymeleaf', module: 'thymeleaf-layout-dialect'
 }
 
 dependencies {
