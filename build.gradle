@@ -41,3 +41,6 @@ dependencies {
     compile 'org.webjars:jquery-ui:1.11.4'
     compile 'org.webjars:bootstrap:3.3.6'
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
