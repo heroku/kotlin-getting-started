@@ -8,12 +8,12 @@ This application supports the [Getting Started with Kotlin on Heroku](https://de
 
 ## Running Locally
 
-Make sure you have Java and Maven installed.  Also, install the [Heroku CLI](https://cli.heroku.com/).
+Make sure you have Java 8 installed.  Also, install the [Heroku CLI](https://cli.heroku.com/).
 
 ```sh
 $ git clone https://github.com/heroku/kotlin-getting-started.git
 $ cd kotlin-getting-started
-$ mvn install
+$ ./gradlew stage
 $ heroku local:start
 ```
 
