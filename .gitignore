@@ -7,3 +7,5 @@ out
 *.iws
 .env
 .DS_Store
+.project
+.settings/
